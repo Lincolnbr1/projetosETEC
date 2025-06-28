@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lista de Compras</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f9f9f9;
+            padding: 20px;
+        }
+        h1 {
+            color: #2c3e50;
+        }
+        ul {
+            list-style-type: none;
+            padding: 0;
+        }
+        li {
+            background-color: #fff;
+            margin-bottom: 10px;
+            padding: 10px;
+            border-radius: 5px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+        .feito {
+            text-decoration: line-through;
+            color: gray;
+        }
+        button {
+            background-color: #2ecc71;
+            color: white;
+            border: none;
+            padding: 5px 10px;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #27ae60;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>🛒 Lista de Compras</h1>
+    <ul>
+        <li>
+            Leite
+            <button onclick="marcarFeito(this)">Feito</button>
+        </li>
+        <li>
+            Pão
+            <button onclick="marcarFeito(this)">Feito</button>
+        </li>
+        <li>
+            Arroz
+            <button onclick="marcarFeito(this)">Feito</button>
+        </li>
+        <li>
+            Feijão
+            <button onclick="marcarFeito(this)">Feito</button>
+        </li>
+        <li>
+            Açúcar
+            <button onclick="marcarFeito(this)">Feito</button>
+        </li>
+    </ul>
+
+    <script>
+        function marcarFeito(botao) {
+            const item = botao.parentElement;
+            item.classList.toggle('feito');
+        }
+    </script>
+
+</body>
+</html>
